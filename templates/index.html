@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Stock Watch{% endblock %}
+
+{% block main %}
+    <section id="title">
+        <div class="container-fluid main">
+            <h1 class="main-title">Stock Watch</h1>
+            <h3 class="main-subtitle">Find Everything You Need</h3>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container-fluid section white-section">
+            <div>
+                <h2 class="heading-color">Features</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 attributes">
+                    <i class="lni lni-briefcase attributes-icon"></i>
+                    <p class="attributes-text">
+                        Track the progress of your stock portfolio through our market database to make informed
+                        decisions.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 attributes">
+                    <i class="lni lni-invest-monitor attributes-icon"></i>
+                    <p class="attributes-text">
+                        We provide all the necessary data to help you succeed and grow your own portfolio.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 attributes">
+                    <i class="lni lni-investment attributes-icon"></i>
+                    <p class="attributes-text">
+                        With real-time updates to our database, you'll be able to precisely manage your stocks with
+                        minimal wait time.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-style" href="{{ url_for('search') }}">Start Exploring!</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

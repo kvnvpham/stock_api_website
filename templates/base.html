@@ -1,0 +1,61 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block styles %}
+    <!-- Line Icons -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-lg nav-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-text" href="{{ url_for('home') }}"><i class="lni lni-bar-chart"></i> Stock Watch</a>
+            <button class="navbar-toggler"
+                    type="button" data-bs-toggle="collapse"
+                    data-bs-target="#StockNav"
+                    aria-controls="StockNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="StockNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" aria-current="page" href="{{ url_for('search') }}">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" href="#footer">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block main %}
+
+    {% endblock %}
+
+    {% block footer %}
+        <section id="footer">
+            <div class="container-fluid footer-padding">
+                <a href="https://github.com/kvnvpham"><i class="lni lni-github-original profile"></i></a>
+                <a href="https://www.linkedin.com/in/kvvpham"><i class="lni lni-linkedin-original profile"></i></a>
+                <a href="mailto:kvnvpham@gmail.com"><i class="lni lni-envelope profile"></i></a>
+                <p>Copyright © Kevin Pham {{ year }}</p>
+            </div>
+        </section>
+    {% endblock %}
+{% endblock %}
